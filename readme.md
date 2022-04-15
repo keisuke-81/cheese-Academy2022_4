@@ -1,6 +1,6 @@
 # プロダクトのタイトル
 チーズアカデミーサイト!
-urlhttps://keisuke-81.github.io/cheese-Academy2022_4/
+https://keisuke-81.github.io/cheese-Academy2022_4/
 ## プロダクトの紹介
 
 - 箇条書きにすると
