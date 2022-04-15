@@ -1,0 +1,685 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	animation: bgchange 10s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+}
+
+
+@keyframes bgchange{
+      0%   {background:#ffe6e1;}/*変化させたい色*/
+      25%  {background:#fdcb9e;}/*変化させたい色*/
+      50%  {background:#fdcbc1;}/*変化させたい色*/
+      75%  {background:#ffff8c;}/*変化させたい色*/
+      90%  {background:#b2dffb;}/*変化させたい色*/
+      100% {background:#ffe6e1;}/*変化させたい色*/
+ }
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*topの部分ーーーーーーーーーーー*/
+body{
+	/* width: 960px; */
+	
+}
+.top_section {
+animation-name: fadeInAnime;/*1で解説*/
+animation-fill-mode:backwards;/*2で解説*/
+animation-duration:3s;/*3で解説*/
+/* animation-iteration-count:infinite; */
+/* 4で解説 */
+animation-timing-function:ease;/*5で解説*/
+animation-delay: 0.5s;/*6で解説*/
+animation-direction:normal;/*7で解説*/
+
+}
+.top_section h1,.top_section p{
+	text-shadow: 1px 2px 3px #ffd61a; 
+	
+}
+.top_section h1:hover{
+	cursor: pointer;
+	transform: scale(2, 2);
+
+}
+
+@keyframes fadeInAnime{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+.top_section{
+	background: url(../img/mainbg.png);
+	background-size: cover;
+    background-position: center;
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+	height: 425px;	
+}
+.course_top p{
+	font-size: ;
+	background-color: #ffd61a;
+}
+.top_section div{
+	color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.top_section h1{
+	font-size: 48px;
+}
+.top_section p{
+	font-size: 36px;
+}
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/*
+navi_place-----------------*/
+.navi_border{
+	/* border: 1px solid; */
+	/* border-color: #efefef; */
+	position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+#container {
+  padding-top: 150px;
+}
+.navi div{
+	background: url(../img/cheese_ca.png);
+	background-size: cover;
+    background-position: center;
+	align-items: center;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navi div{
+	
+	text-align: center;
+	font-weight: bold;
+	transition: all 1s linear 0s;
+	cursor: pointer;
+	
+}
+
+.navi{
+	font-size: 21px;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	
+	align-items: center;
+	padding: auto 30px;
+	width: 90%;
+
+}
+.navi a{
+	color:red;
+	
+}
+.navi div:hover{
+	transform: rotateZ(360deg);
+}
+.navi a:hover{
+	color: #ffd61a;
+}
+.navi img{
+	/* margin: 0 auto;
+	background-color: #ffd61a;
+	border:1px solid #ffd61a;
+	border-radius: 5px;
+	padding: 0 30px; */
+
+}
+
+.navi img{
+	width: 50%;
+	padding: 10px 20px;
+}
+
+
+
+/* about_place------------------------------ */
+.about,.course_top,.news_all,.contact,.course_vacation{
+	background: url(../img/cheese.jpg);
+		background-size: cover;
+    background-position: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+.more,.contact_text{
+	background: url(../img/cheese2.jpg);
+		background-size: cover;
+    background-position: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+
+.course_vacation{
+	height: 30px;
+
+}
+
+
+
+.about h2{
+	font-size: 24px;
+	color: #ffd61a;
+	border: #ffd61a;
+	border-radius: 10px;
+	padding: 3px 10px;
+	margin: 120px auto 4px;
+	background-color: #000;
+
+}
+.about{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	
+}
+.about p{
+    margin: 20px auto;
+	background-color: #ffd61a;
+	border: #ffd61a;
+    border-radius: 10px;
+	padding: 0 10px;
+
+}
+.about_1{
+
+}
+
+/*
+4photo_place--------------------*/
+.photo4{
+	display: flex;
+	background-size: cover;
+}
+.photo4 img{
+	width: 100%;
+}
+.loop_wrap {
+  display: flex;
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+}
+
+.loop_wrap img {
+  width: auto;
+  height: 100%;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+.loop_wrap img:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap img:last-child {
+  animation: loop2 50s linear infinite;
+}
+/*
+COURSE_place---------------------*/
+.course_top div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+}
+.course_top p{
+	border: #ffd61a;
+	border-radius: 10px;
+	padding: 0 10px;
+}
+
+
+.course_paraglam{
+	display: flex;
+
+}
+.course_paraglam div{
+background-color:whitesmoke;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: auto mine48px;
+}
+.course_paraglam h3{
+	font-size: 24px;
+	color: #222222;
+	margin-bottom: 40px;
+}
+.c_paraglam1{
+	padding-left: 48px;
+}
+.c_paraglam2{
+	padding-left: 48px;
+}
+
+	
+
+
+.course{
+display: flex;
+flex-direction: column;
+}
+.course_paraglam img,.course_paraglam div{
+	width: 50%;
+}
+
+
+.chuu img{
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* //question_place---------------- */
+
+.question{
+	margin: 50px auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.question_space{
+	display: flex;
+	justify-content: space-between;
+	width: 960px;
+}
+.question_space img{
+	width: 100px;
+	transition: all 1s linear 0s;
+	cursor: pointer;
+}
+.question_space img:hover{
+	transform: rotateZ(360deg);
+}
+
+
+/*
+NEWS_place---------------------*/
+.news_top{
+	padding: 64px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 200px;
+}
+.news_top h2{
+	color:#ffd61a ;
+	border: #ffd61a;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: #222222;
+}
+.news_top p,.news p,.contact p,.contact h2,.contact-body label{
+	background-color: #ffd61a;
+	border: #ffd61a;
+	border-radius: 10px;
+	padding: 0 10px;
+}
+
+.news{
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+	margin: 0 auto 34px;
+}
+.news_coment img{
+	width: 100%;
+}
+.news_coment img{
+	margin-bottom:32px;
+}
+.news p{
+    margin: 12px;
+}
+/* NEWS_more_botton---------------------- */
+.more{
+	display: flex;
+    justify-content: center;
+	margin-bottom: 48px;
+
+}
+.more_botton{
+  font-size: 21px;
+  text-align: center;
+   border: 1px solid #ffd61a;
+  border-radius: 5px;
+  background-color:#ffd61a;
+  border-bottom: 5px solid #ccc100;
+  width: 300px;
+  height: 60px;
+}
+.more_botton a{
+	color: #fafafa;
+}
+
+
+.more_botton:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+.more_botton a:hover{
+	color:#222222;
+}
+
+
+/* access_title----------------------------- */
+.access_title {
+	text-align: center;
+	padding: 64px ;
+	background-color: #fafafa;
+	
+}
+iframe{
+	width: 100%;
+}
+.access_title h2{
+	padding-bottom: 24px;
+}
+.access_info{
+	display: flex;
+	justify-content: center;
+	background-color: #fafafa;
+}
+.access_info_section_p1{
+	width: 100px;
+}
+.access_info_section{
+	display: flex;
+	gap: 48px;
+	padding:12px;
+}
+/* .access_mapping{
+ display: flex;
+ justify-content: center;
+ background-color: #fafafa;
+
+} */
+.access_info{
+	display: flex;
+	justify-content: center;
+}
+.access_info {
+	padding: 52px 0 68px 0;
+}
+
+/* contact_place-------------------------------- */
+.contact_text h2{
+	margin-top: 40px;
+	background-color: #ffd61a;
+}
+.contact_text{
+	display: flex;
+	justify-content: center;
+    text-align: center;
+}
+.contact_text p{
+	margin: 16px 0;
+	background-color: #ffd61a;
+}
+
+.contact_form{
+	margin-top: 64px;
+}
+
+
+
+
+/* contact_table-------------------------- */
+.contact_text{
+	padding-top: 50px;
+}
+.contact-item,
+.contact-body {
+    padding: 20px;
+    
+}
+
+.contact-item {
+    text-align: left;
+    width: 40%;
+	 vertical-align:top;
+
+}
+.contact-item p{
+	background-color: #ffd61a;
+}
+.contact-table {
+	width: 90%;
+	margin: 64px auto 40px;
+
+}
+
+.contact-body {
+	
+    width: 60%;
+}
+.form-text {
+    width: 328px;
+	height: 36px;
+    padding: 10px;
+    border: 1.5px solid #ffd61a;
+	background: #fafafa;
+	border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+}
+.form-textarea{
+	 width: 328px;
+	height: 108px;
+    padding: 10px;
+    border: 1.5px solid #ffd61a;
+	background: #fafafa;
+	border-radius: 10px;
+
+
+}
+.contact-skill {
+    display: block;
+}
+
+.contact-skill + .contact-skill {
+    margin-top: 10px;
+}
+
+.contact-skill-txt {
+    margin-left: 5px;
+}
+.form-text_big{
+	 width: 328px;
+	height: 108px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	
+	
+}
+
+.contact-submit_div{
+
+  font-size: 21px;
+  border: #ffd61a;
+  background-color:#ffd61a;
+  border-radius: 10px;
+  color: white;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-bottom: 5px solid #ccc100;
+}
+.contact-submit_div:hover {
+  margin-top: 3px;
+  color: #000;
+  background: # fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+.contact-body label{
+	background-color: #ffd61a;
+
+}
+
+/* welcome_place--------------- */
+
+.contact-item h3,.contact-body h3{
+  font-size: 2.5rem;
+  color: #ffff8c;
+}
+.contact-body_div input{
+	font-size: 4rem;
+	height: 100px;
+	width: 400px;
+}
+
+
+/* page_top------------------- */
+
+
+
+/* トップへ戻るボタン */
+.page_top_btn {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  font-weight: bold;
+  padding: 0.7em;
+  text-align: center;
+  /* background: #ffd61a; */
+  color: #222222;
+  transition: 0.3s0;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/cheese_ca.png);
+  background-size: cover;
+    background-position: center;
+	align-items: center;
+	transition: all 1s linear 0s;
+	cursor: pointer;
+
+}
+
+/* マウスオーバー時 */
+.page_top_btn:hover {
+  transform: rotateZ(360deg);
+  color: #ffd61a;
+}
+
+
+
+/* footer---------------------------------- */
+footer{
+	text-align: center;
+	color: aliceblue;
+	font-size: 18px;
+	background-color: #707070;
+}
+footer p{
+	padding: 32px 0;
+}
+
+/* aka_place--------------------- */
+
+
+
+
+/* kuro_place--------------------- */
+.kuro_place{
+	width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.kuro_place h2{
+	font-size: 4rem;
+	margin-top: 50px;
+}
+.kuro_place p{
+	margin-bottom: 50px;
+	font-size: 2rem;
+}
+.kuro_place img{
+	width: 70%;
+}
+
+
+/* hazure_place------------------- */
+.hazure{
+
+}
